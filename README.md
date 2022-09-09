@@ -1,0 +1,1 @@
+Capturing and labeling captcha images from a website automatically using javascript. The goal here is to make a dataset of captcha images and finally use the dataset to make an AI model which predicts the text in a captcha image
