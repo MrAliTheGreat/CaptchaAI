@@ -42,6 +42,8 @@ chrome.implicitly_wait(10)
 chrome.get(os.environ.get("URL"))
 
 while(True):
+    if(not len(os.listdir('./Unannotated-Dataset')) % 100):
+        chrome.refresh()
     capture(chrome)
     renewImage(chrome)
     print(f"{len(os.listdir('./Unannotated-Dataset'))} Images in Unannotated Dataset!")
