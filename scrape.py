@@ -33,7 +33,7 @@ def renewImage(chrome: webdriver):
 
 
 start = time()
-wait = 10
+wait = 6
 options = Options()
 options.add_argument("--headless=new")
 chrome = webdriver.Chrome("./chromedriver.exe", options = options)
@@ -42,7 +42,7 @@ chrome.implicitly_wait(10)
 chrome.get(os.environ.get("URL"))
 
 while(True):
-    if(not len(os.listdir('./Unannotated-Dataset')) % 100):
+    if(not len(os.listdir('./Unannotated-Dataset')) % 50):
         chrome.refresh()
     capture(chrome)
     renewImage(chrome)
